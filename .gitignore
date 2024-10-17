@@ -1,0 +1,48 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+*.xcode.env
+*xcode.env.local
+
+# typescript
+*.tsbuildinfo
+
+# node.js
+yarn-error.log
+
+# Android & IOS folder
+ios/build/
+ios/Pods/
+*Podfile.lock
+Android/build/
+Android/app/build/
+vendor
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*

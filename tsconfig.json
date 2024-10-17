@@ -1,0 +1,4 @@
+{
+  "include": ["src/types/**/*"],
+  "extends": "@react-native/typescript-config/tsconfig.json"
+}
