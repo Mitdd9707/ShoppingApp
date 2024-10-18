@@ -1,79 +1,111 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+## Shopping List App
 
-# Getting Started
+This is a simple shopping list app built using React Native with Redux for state management and Redux Persist for local data persistence. The app allows users to add, edit, delete, and mark shopping items as purchased. The list is saved locally and persists even when the app is closed.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
 
-## Step 1: Start the Metro Server
+- Add shopping items with a name, quantity, and unit.
+- Edit shopping item names.
+- Mark items as purchased.
+- Delete items from the list.
+- Data persistence using Redux and Redux Persist.
+- Optional: Backend synchronization (if implemented).
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Tech Stack
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- React Native: Frontend framework for building cross-platform mobile apps.
+- Redux: For state management.
+- Redux Persist: For persisting Redux state locally.
+- Jest: For testing.
+- React Native Testing Library: For UI testing.
 
-```bash
-# using npm
-npm start
+## Prerequisites
 
-# OR using Yarn
-yarn start
-```
+Before running the project, ensure you have the following installed on your system:
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
+- Node.js (>= 12.x)
+- npm or yarn (npm is used in this guide)
+- React Native CLI (for running on a physical or emulator device)
+- Install it globally using:
 
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+npm install -g react-native-cli
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+- Android Studio (for Android development) or Xcode (for iOS development) with a simulator/emulator or physical device connected.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Getting Started
 
-## Step 3: Modifying your App
+1. Clone the repository
 
-Now that you have successfully run the app, let's modify it.
+```bash
+git clone https://github.com/yourusername/shopping-list-app.git
+cd shopping-list-app
+```
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+2. Install dependencies
+   Install all project dependencies using npm or yarn:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+```bash
+yarn install
+```
 
-## Congratulations! :tada:
+3. Running the App
+   Android
+   Make sure you have an Android emulator running or a physical device connected. Then, run the following command:
 
-You've successfully run and modified your React Native App. :partying_face:
+```bash
+npx react-native run-android
+```
 
-### Now what?
+iOS
+Ensure you have Xcode installed and a simulator running, then run the following command:
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+```bash
+npx react-native run-ios
+```
 
-# Troubleshooting
+Note: For iOS development, you must run this on a Mac system with Xcode installed.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+4. Redux Persist
+   Redux Persist is configured to store the shopping list data locally. This means that your shopping list will remain intact even when you close and reopen the app.
 
-# Learn More
+## Testing
 
-To learn more about React Native, take a look at the following resources:
+This project includes a basic set of unit and UI interaction tests using Jest and React Native Testing Library.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+### Running Tests
+
+To run all the test cases, simply run:
+
+```bash
+yarn test
+```
+
+### Writing Tests
+
+Test cases are written in the **tests** folder. The tests cover:
+
+- Adding a new shopping item.
+- Editing an existing item's name.
+- Marking an item as purchased.
+- Deleting an item from the list.
+- Redux actions and reducers (optional, if implemented).
+
+### Project Structure
+
+- src/components: Contains the React Native components (e.g., ShoppingItem, AddItemForm).
+- src/redux: Contains Redux slices and store configuration.
+- **tests**: Contains unit and UI tests.
+
+# License
+
+This project is licensed under the MIT License.
+
+### How to Contribute
+
+Feel free to fork the repository, make enhancements, and submit pull requests.
+
+# Author
+
+Developed by Mit Desai
