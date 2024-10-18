@@ -40,7 +40,7 @@ npm install -g react-native-cli
 
 ```bash
 git clone https://github.com/Mitdd9707/ShoppingApp.git 
-cd shopping-list-app
+cd ShoppingApp
 ```
 
 2. Install dependencies
