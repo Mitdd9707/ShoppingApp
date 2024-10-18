@@ -39,7 +39,7 @@ npm install -g react-native-cli
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/shopping-list-app.git
+git clone https://github.com/Mitdd9707/ShoppingApp.git 
 cd shopping-list-app
 ```
 
